@@ -25,7 +25,7 @@ SECRET_KEY = ')3m6lh60lz)zhm(a(rdyktie1ju3+%baq4sd-5fwrm#g#xwmp-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['Artem010191.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', 'Artem010191.pythonanywhere.com']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.last_ten_events'
 ]
 
 MIDDLEWARE = [
