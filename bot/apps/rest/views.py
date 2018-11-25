@@ -1,11 +1,9 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .auth_classes import CsrfExemptSessionAuthentication
 import requests
 
 
 class Last10EventsView(APIView):
-    authentication_classes = (CsrfExemptSessionAuthentication,)
 
     def post(self, request):
         if request.method == 'POST':
