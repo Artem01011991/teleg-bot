@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import last_10_events
+from .views import Last10EventsView
 
 
 urlpatterns = [
-    path('', last_10_events)
+    path('', Last10EventsView.as_view())
 ]
