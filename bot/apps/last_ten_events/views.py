@@ -2,4 +2,4 @@ from django.http import HttpResponse
 
 
 def last_ten_events_view(request):
-    return HttpResponse(status=204)
+    return HttpResponse('Hello')
