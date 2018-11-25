@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from bot.apps.last_ten_events import urls
 
 urlpatterns = [
+    path('', urls),
     path('admin/', admin.site.urls),
 ]

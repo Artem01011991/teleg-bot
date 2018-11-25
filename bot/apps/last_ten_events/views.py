@@ -1,3 +1,5 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+
+def last_ten_events_view(request):
+    return HttpResponse(status=204)
