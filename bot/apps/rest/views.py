@@ -1,12 +1,11 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from django.views.decorators.csrf import csrf_exempt
 import requests
 
 
 class Last10EventsView(APIView):
+    authentication_classes = []
 
-    @csrf_exempt
     def post(self, request):
         if request.method == 'POST':
             requests.get(
