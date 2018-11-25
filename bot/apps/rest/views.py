@@ -1,9 +1,10 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from braces.views import CsrfExemptMixin
 import requests
 
 
-class Last10EventsView(APIView):
+class Last10EventsView(CsrfExemptMixin, APIView):
     authentication_classes = []
 
     def post(self, request):
