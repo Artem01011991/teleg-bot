@@ -25,7 +25,7 @@ SECRET_KEY = ')3m6lh60lz)zhm(a(rdyktie1ju3+%baq4sd-5fwrm#g#xwmp-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['Artem010191.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', 'Artem010191.pythonanywhere.com']
 
 
 # Application definition
@@ -38,17 +38,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'apps.rest'
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    # 'django.middleware.security.SecurityMiddleware',
+    # 'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'rest.middleware.DisableCSRF'
     # 'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.contrib.auth.middleware.AuthenticationMiddleware',
+    # 'django.contrib.messages.middleware.MessageMiddleware',
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'botproject.urls'
@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'botproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'teleg_db',
-        'USER': 'Artem010191',
-        'HOST': 'Artem010191.mysql.pythonanywhere-services.com',
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'teleg_db',
+        # 'USER': 'Artem010191',
+        # 'HOST': 'Artem010191.mysql.pythonanywhere-services.com',
     }
 }
 
