@@ -7,7 +7,9 @@ class Last10EventsView(APIView):
     authentication_classes = []
 
     def post(self, request):
-        events = requests.get('https://test.bop.rest/api/feed/', headers={'Authorization': 'Token 233e7ef7888d82e098b3d63ca2a888d0e32a0eea'})
+        events = requests.get(
+            'https://test.bop.rest/api/feed/',
+            headers={'Authorization': 'Token 233e7ef7888d82e098b3d63ca2a888d0e32a0eea'}).json()
 
         requests.get(
             'https://api.telegram.org/bot783030784:AAGA7zS4twvgcotcghkLPm-xPfrTn7h91SE/sendMessage',
