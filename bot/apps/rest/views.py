@@ -25,7 +25,6 @@ class Last10EventsView(APIView):
                 {'id': 70446, 'time': '2017-08-12T17:35:00Z', 'name': 'Albot R. - Youzhny M.'},
                 {'id': 69445, 'time': '2017-08-13T12:30:00Z', 'name': 'Hungary - Germany'}]
 
-
             requests.get(
                 'https://api.telegram.org/bot783030784:AAGA7zS4twvgcotcghkLPm-xPfrTn7h91SE/sendMessage',
                 params={
