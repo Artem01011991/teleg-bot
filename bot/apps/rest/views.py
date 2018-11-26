@@ -1,6 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import requests
+import datetime
 
 
 class Last10EventsView(APIView):
@@ -29,7 +30,10 @@ class Last10EventsView(APIView):
                 'https://api.telegram.org/bot783030784:AAGA7zS4twvgcotcghkLPm-xPfrTn7h91SE/sendMessage',
                 params={
                     'chat_id': request.data['message']['chat']['id'],
-                    'text': ''.join('{time} {name}\n'.format(time=i['time'], name=i['name']) for i in events)}
+                    'text': ''.join('{time} {name}\n'.format(
+                        time=datetime.datetime.strptime(i['time'], "%Y-%m-%dT%H:%M:%SZ").__str__(),
+                        name=i['name']
+                    ) for i in events)}
             )
 
         return Response(status=204)
