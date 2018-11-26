@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from apps.rest import urls
+from apps.last_ten_events import urls
 
 urlpatterns = [
     path('', include(urls)),
